@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group 'edu.princeton.cs'
@@ -16,9 +17,12 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
-task execute(type:JavaExec) {
-    main = project.hasProperty("mainClass") ? project.getProperty("mainClass") : ""
-    classpath = sourceSets.main.runtimeClasspath
+application {
+    mainClass = "QuickUnionUF"
+}
+
+run {
+    standardInput = System.in
 }
 
 test {
