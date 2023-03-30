@@ -18,7 +18,7 @@ dependencies {
 }
 
 application {
-    mainClass = "ResizingArrayStack"
+    mainClass = "ResizingArrayQueue"
 }
 
 run {
