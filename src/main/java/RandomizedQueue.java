@@ -1,6 +1,5 @@
 import edu.princeton.cs.algs4.StdRandom;
 
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -35,7 +34,13 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
 
     private void resize(int size) {
-        q = Arrays.copyOf(q, size);
+        Item[] resized = (Item[]) new Object[size];
+
+        for (int i = 0; i < n; i++) {
+            resized[i] = q[i];
+        }
+
+        q = resized;
     }
 
     // remove and return a random item

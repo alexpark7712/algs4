@@ -3,7 +3,7 @@ import edu.princeton.cs.algs4.StdOut;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Dequeue<Item> implements Iterable<Item> {
+public class Deque<Item> implements Iterable<Item> {
     private Node<Item> first;
     private Node<Item> last;
     private int count;
@@ -14,7 +14,7 @@ public class Dequeue<Item> implements Iterable<Item> {
         private Node<Item> next;
     }
 
-    public Dequeue() {
+    public Deque() {
         first = null;
         last = null;
         count = 0;
@@ -135,7 +135,7 @@ public class Dequeue<Item> implements Iterable<Item> {
     }
 
     public static void main(String[] args) {
-        Dequeue<String> q = new Dequeue<>();
+        Deque<String> q = new Deque<>();
         q.addFirst("1");
         q.addFirst("0");
         q.addLast("2");
