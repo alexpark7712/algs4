@@ -54,6 +54,9 @@ public class Percolation {
             uf.union(p, up);
         }
         if (down != OUT_OF_RANGE && open[down]) {
+
+
+
             uf.union(p, down);
         }
         if (left != OUT_OF_RANGE && open[left]) {

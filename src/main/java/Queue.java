@@ -11,7 +11,6 @@ public class Queue<Item> implements Iterable<Item> {
 
 
     private static class Node<Item> {
-
         private Item item;
         private Node<Item> next;
     }

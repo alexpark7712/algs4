@@ -4,13 +4,13 @@ import edu.princeton.cs.algs4.StdOut;
 import java.util.NoSuchElementException;
 
 public class ResizingArrayStack<Item> {
-    private static final int INIT_CPACITY = 4;
+    private static final int INIT_CAPACITY = 4;
 
     private Item[] a;
     private int n;
 
     public ResizingArrayStack() {
-        a = (Item[]) new Object[INIT_CPACITY];
+        a = (Item[]) new Object[INIT_CAPACITY];
         n = 0;
     }
 
