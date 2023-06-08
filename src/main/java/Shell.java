@@ -1,14 +1,15 @@
-/*
- * Copyright (c) 2023 Kakao Corporation. All rights reserved.
- * Kakao Corporation PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
- */
-
-public class Insertion {
+public class Shell {
     public static void sort(Comparable[] a) {
-        int size = a.length;
-        for (int i = 0; i < size; i++) {
-            for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
-                swap(a, j, j - 1);
+        int n = a.length;
+
+        int h = 1;
+        while (h < 3 / n) {
+            h = 3 * h + 1;
+        }
+
+        for (int i = h; i < n; i++) {
+            for (int j = i; j >= h && less(a[j], a[j - h]); j -= h) {
+                swap(a, j, j - h);
             }
         }
     }
